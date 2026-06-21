@@ -34,38 +34,61 @@ cloud infrastructure around them.
 *One place for every venue and vendor — and an AI that turns a few details into a real, itemised
 price in sixty seconds.*
 
-- **Trustworthy by design** — a **deterministic pricing engine** computes every number; the LLM only
-  parses intent and writes prose, so a quote can never *hallucinate* a price.
-- **A learning loop** — completed escrow bookings feed real transacted prices back into the engine
-  (empirical-Bayes calibration), so quotes sharpen with use.
-- **Where users actually are** — WhatsApp-native quote + vendor-onboarding bots, escrow bookings,
-  reviews, a vendor dashboard, and programmatic SEO pages.
-- **Provider-pluggable AI** — swap Gemini ↔ Claude with one env var, with a live cost ledger metering
-  every call. **34 passing tests.**
+The Indian wedding market is enormous, but pricing is a black box — couples fill a form and wait
+days for a callback. Vivahub gives an instant, transparent, itemised quote and turns it into a
+qualified lead.
 
-`FastAPI` · `SQLAlchemy / Postgres` · `React 19 + Vite + Tailwind` · `Gemini / Claude` · `WhatsApp Cloud API` · `escrow payments`
+- **Trustworthy by design.** Prices come from a **deterministic pricing engine** — per-category bands
+  scaled by city tier, season and day, with **empirical-Bayes shrinkage** for thin data — while the LLM
+  only parses free text into a structured request and writes the summary. A quote can never
+  *hallucinate* a number.
+- **A self-improving price model.** Every completed escrow booking writes the real **transacted** price
+  back into the dataset; the engine blends those booked prices toward the seed prior, so quotes get
+  sharper the more the platform is used (the "flywheel").
+- **WhatsApp-native — two bots.** Stateful conversation engines on the **WhatsApp Cloud API** run the
+  whole funnel in chat: a *couple* bot (free text → itemised quote → capped, qualified lead) and a
+  *vendor-onboarding* bot (list a business in a minute), with an offline simulator for testing.
+- **Escrow bookings + a vendor OS.** Full booking lifecycle (deposit → confirm → release) with a
+  take-rate, a reviews system (*verified* = booked on-platform), and a vendor dashboard for leads,
+  payouts and calendar availability.
+- **Provider-pluggable AI + cost ledger.** Swap **Gemini ↔ Claude** with one env var; every call is
+  metered into an append-only spend ledger. Programmatic-SEO landing pages + a sitemap for organic reach.
+- **Built to run** — clean separation of concerns, **34 passing tests**, a hermetic test suite, and a
+  one-command local setup.
+
+`FastAPI` · `SQLAlchemy / Postgres` · `React 19 + Vite + Tailwind` · `Gemini / Claude` · `WhatsApp Cloud API` · `escrow payments` · `Docker`
 
 ### 🎬 ClipTrip — AI travel-video generator (Reels + YouTube) &nbsp;·&nbsp; *2026*
 *Turns 5–20 raw travel clips into ready-to-post 20–40s 9:16 Reels and long-form 16:9 cuts —
 AI handles footage understanding, narrative editing, captions, and music.*
 
-- **7-stage pipeline** (FastAPI + Celery + Redis): Gemini per-clip analysis & edit-planning,
-  **librosa** beat-synced cutting, saliency-aware 9:16 reframing (**OpenCV / YuNet**), and **ffmpeg**
-  render with −14 LUFS loudness-normalised audio.
-- React 19 + Tailwind frontend with a light video editor, usage metering, tiered INR pricing &
-  Razorpay; Dockerised on DigitalOcean with **per-trip cost ledgers (~₹40/reel)**, auto-retry
-  alerting, and **26 passing tests**.
+- **A 7-stage AI pipeline** orchestrated on **FastAPI + Celery + Redis**: Gemini-driven per-clip
+  analysis & narrative edit-planning → **librosa** beat-synced cutting → saliency-aware 9:16 reframing
+  (**OpenCV / YuNet** face detection) → caption rendering → **ffmpeg** render with −14 LUFS
+  loudness-normalised audio.
+- **Reliability for long-running jobs** — Celery auto-retry with failure alerting, per-job locking, and
+  durable progress, so a multi-minute render never silently dies.
+- **A real product, not a demo** — React 19 + Tailwind frontend with a light in-browser editor, usage
+  metering, tiered INR pricing, and Razorpay checkout; Firebase auth.
+- **Cost-aware by design** — per-trip cost ledgers cap AI/media spend at **~₹40 per reel**; shipped with
+  **26 passing tests**, Dockerised on **DigitalOcean**.
 
-`FastAPI` · `Celery + Redis` · `Gemini` · `librosa` · `OpenCV` · `ffmpeg` · `React 19` · `Razorpay` · `DigitalOcean`
+`FastAPI` · `Celery + Redis` · `Gemini` · `librosa` · `OpenCV / YuNet` · `ffmpeg` · `React 19` · `Razorpay` · `Firebase` · `DigitalOcean`
 
 ### ❤️ EZHEALTH — emergency healthcare alert system &nbsp;·&nbsp; *2022*
 *An IoT remote health-monitoring device that streams vitals to the cloud and auto-alerts doctors
 in a crisis — **presented to the Prime Minister of India**.*
 
-- NodeMCU / ESP8266 device streaming **Pulse Rate & Temperature every 15s**, auto-alerting doctors by
-  email and phone call on abnormal readings (>140 BPM / >37 °C).
-- Full custom hardware: 95%-accurate sensors on a custom PCB in a 3D-printed enclosure.
-- 🥇 **Gold Award, INEX International Innovation & Invention Expo 2022** (represented India). &nbsp; [Demo](http://tinyurl.com/ezhealth-pm)
+- **Real-time vitals → cloud.** A NodeMCU / ESP8266 device streams **Pulse Rate & Temperature to the
+  cloud every 15 seconds**.
+- **Automatic escalation.** Auto-alerts doctors by **email and phone call** on abnormal readings
+  (>140 BPM / >37 °C) — built for rapid emergency response.
+- **Full custom hardware.** 95%-accurate sensors on a **custom-designed PCB** in a 3D-printed
+  polycarbonate enclosure (C++ / Arduino).
+- 🥇 **Gold Award**, INEX International Innovation & Invention Expo 2022 (represented India) — and
+  **presented to the Prime Minister of India**. &nbsp; [Demo](http://tinyurl.com/ezhealth-pm)
+
+`C++` · `Arduino` · `NodeMCU / ESP8266` · `custom PCB` · `3D design` · `IoT sensors`
 
 ---
 
