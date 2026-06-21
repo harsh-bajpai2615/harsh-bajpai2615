@@ -125,15 +125,6 @@ in a crisis — **presented to the Prime Minister of India**.*
 
 ---
 
-## 📊 GitHub at a glance
-
-<p>
-  <img height="160" src="https://github-readme-stats.vercel.app/api?username=harsh-bajpai2615&show_icons=true&hide_border=true&include_all_commits=true&count_private=true" />
-  <img height="160" src="https://github-readme-stats.vercel.app/api/top-langs/?username=harsh-bajpai2615&layout=compact&hide_border=true&langs_count=8" />
-</p>
-
----
-
 ## 📫 Let's talk
 
 Open to roles where I can own real product end to end.
