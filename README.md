@@ -1,8 +1,6 @@
 <!--
-  GitHub PROFILE README for github.com/harsh-bajpai2615
-  Lives in a repo named exactly: harsh-bajpai2615/harsh-bajpai2615
-  A few [BRACKETED] links are left for you to fill (CP profiles, portfolio); everything
-  else is pulled from your résumé. Phone number intentionally omitted (public page).
+  GitHub PROFILE README for github.com/harsh-bajpai-2615 (repo: harsh-bajpai2615/harsh-bajpai2615)
+  Phone intentionally omitted (public page). Codeforces/LeetCode badges are visual until handles are added.
 -->
 
 # Hi, I'm Harsh Bajpai 👋
@@ -11,8 +9,14 @@
 
 I take ideas all the way to production — system architecture, multi-stage AI pipelines, the
 full-stack app, and the cloud deploy — usually as the **sole developer**. I care about clean
-seams (keep the LLM away from anything that must be exact), real tests, and shipping in small,
-verified increments.
+seams (keep the language model away from anything that must be exact), real tests, and shipping
+in small, verified increments.
+
+I come from a **competitive-programming and olympiad** background — Codeforces Expert, AIR 3 in the
+Indian Maths Olympiad Qualifier, AIR 74 in JEE Advanced 2026 — which shows up in how I reason about
+systems, edge cases, and performance. These days I spend most of my time building **production
+generative-AI products**: LLM orchestration, generative-media pipelines, and the full-stack apps and
+cloud infrastructure around them.
 
 🎓 Incoming at **IIT Madras** (B.S. Data Science) & **Macquarie University, Sydney** (B.IT) &nbsp;·&nbsp; 💼 AI Product Developer @ **DigiFab Media LLC** &nbsp;·&nbsp; 📍 Rewa, India
 
@@ -101,31 +105,82 @@ in a crisis — **presented to the Prime Minister of India**.*
 
 ---
 
-## 🏆 Highlights
+## 💼 Experience
 
-- 🧮 **Competitive programming:** Codeforces **Expert** · LeetCode **Guardian** · CodeChef **6★**
-- 🎯 **AIR 44** in JEE Mains 2026 · **AIR 3** in IOQM 2022 · AIR 856 JEE Advanced 2025 · AIR 69 UGEE 2025
-- 🥇 **EZHEALTH presented to the Prime Minister of India**; Gold Award at INEX 2022 (represented India)
-- 🎓 Dual undergraduate degree — **IIT Madras** (Data Science) **+ Macquarie University, Sydney** (IT)
-- 🤝 Mentored **50+ students** for the Indian Olympiad Qualifier in Mathematics (IOQM)
+### DigiFab Media LLC — AI Product Developer / Full-Stack Developer
+*Jun 2026 – Present · Remote*
+- Own **end-to-end** development of AI-powered media products as the **sole developer** — from system
+  architecture and multi-stage AI pipelines to the full-stack app and production cloud deployment.
+- Build production generative-AI workflows around LLMs (Google Gemini) and generative-media APIs with
+  **hardened JSON parsing, graceful fallbacks, and per-job cost telemetry that caps AI spend (~₹40/output)**.
+- Engineer reliability for long-running media jobs — Celery auto-retry with failure alerts, per-job
+  locking, and durable progress — shipping features in small, tested increments to `main`.
+
+### Meta — Content Review Intern · Trust & Safety
+*Apr 2020 – Jan 2022 · Remote*
+- Reviewed and classified **1,000+ pieces of online content** using Meta's **Single Review Tool (SRT)**,
+  sustaining a **98% accuracy rate** against platform policy at high throughput.
+- Enforced platform **trust & safety** standards during **large-scale content-moderation operations** —
+  identifying and flagging sensitive and policy-violating material (e.g. graphic, hateful, or misleading
+  content) and applying nuanced policy judgement under tight quality and time targets.
+- Helped keep content surfaces safe for a global user base, working to strict precision and consistency
+  benchmarks on a remote moderation team.
+
+### Appen — Independent Contractor · AI Data & NLP
+*Mar 2020 – Sep 2022 · Remote*
+- Evaluated and refined **500+ AI dataset prompts**, improving dataset accuracy and safety for
+  language-focused annotation and model-training tasks.
+- Built scalable **quality-assurance frameworks** to streamline multilingual review and annotation
+  workflows.
+
+### Mathematics Mentor — Independent
+*Apr 2025 – Jul 2025*
+- Mentored **50+ students** in advanced problem-solving (number theory, combinatorics, geometry) for the
+  Indian Olympiad Qualifier in Mathematics (IOQM), designing simplified curricula that lifted performance.
 
 ---
 
-## 🎓 Education & 💼 Experience
+## 🎓 Education
 
-**Education**
-- **IIT Madras** — B.S. in Data Science & Applications · *2026 – 2030*
-- **Macquarie University, Sydney** — Bachelor of Information Technology · *2026 – 2029*
+- **Indian Institute of Technology, Madras** — B.S. in Data Science & Applications · *2026 – 2030*
+- **Macquarie University, Sydney, Australia** — Bachelor of Information Technology · *2026 – 2029*
+- **Senior Secondary (Class XII), CBSE — Kota, Rajasthan** — Physics, Chemistry, Mathematics · *2023 – 2025*
 
-**Experience**
-- **DigiFab Media LLC** — AI Product Developer / Full-Stack Developer · *2026 – present* — own end-to-end
-  development of AI media products as sole developer, from architecture to production deployment.
-- Earlier: AI data & NLP contracting (**Appen**, 500+ prompts refined), content review (**Meta**, 1,000+
-  items at 98% accuracy), and mathematics mentoring.
+---
+
+## 🏆 Highlights & achievements
+
+- 🧮 **Competitive programming** — Codeforces **Expert** · LeetCode **Guardian** · CodeChef **6★**
+- 🎯 **AIR 74 — JEE Advanced 2026** · **AIR 44 — JEE Mains 2026** · **AIR 3 — IOQM 2022** · AIR 69 — UGEE 2025
+- 🥇 **EZHEALTH presented to the Prime Minister of India** · **Gold Award**, INEX International Innovation &
+  Invention Expo 2022 (represented India)
+- 🏅 Top 100 — ATL Marathon 2022-23 · Top 20 — TechExpo, IIT Guwahati · Global Innovation **Impact** &
+  **Communication** Awards (Invent Future Global)
+- 🎓 Pursuing a **dual undergraduate degree** — IIT Madras (Data Science) + Macquarie University, Sydney (IT)
+
+---
+
+## 🛠️ How I work
+
+- **Ship end to end.** I'm comfortable owning a product from the data model to production.
+- **Test what matters.** Real, focused test suites — I trust code I can re-run, not vanity coverage.
+- **Clear seams.** Keep the language model away from anything that must be exact; make providers
+  swappable; meter what you spend. Boring, well-bounded systems beat clever fragile ones.
+- **Build for reality.** The channel users actually use, the cost per call, the unit economics —
+  not just the happy path.
+
+---
+
+## 🌟 Beyond the code
+
+- 🗣️ **Languages** — English, Hindi
+- 🎼 **Interests** — National-level **Yoga** · **Tabla** (Sangeet Prabhakar)
+- 🎤 **Conferences** — IIT Bombay E-Summit (2023) · Maker Fest, Vadodara (2024) · INEX Innovation Expo, Goa (2022)
+- 🤝 **Volunteering** — Vidyanjali Platform, Special Campaign 5.0 (2025)
 
 ---
 
 ## 📫 Let's talk
 
-Open to roles where I can own real product end to end.
+I'm open to roles where I can own real product end to end.
 📧 **harshmusic2007@gmail.com** &nbsp;·&nbsp; 💼 [LinkedIn](https://linkedin.com/in/harsh-bajpai2007)
