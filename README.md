@@ -1,6 +1,6 @@
 <!--
   GitHub PROFILE README for github.com/harsh-bajpai-2615 (repo: harsh-bajpai2615/harsh-bajpai2615)
-  Phone intentionally omitted (public page). Codeforces/LeetCode badges are visual until handles are added.
+  Phone intentionally omitted (public page). Codeforces + CodeChef badges link to verified profiles.
 -->
 
 # Hi, I'm Harsh Bajpai 👋
@@ -23,8 +23,8 @@ cloud infrastructure around them.
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/harsh-bajpai2007)
 [![Email](https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:harshmusic2007@gmail.com)
 &nbsp;
-![Codeforces](https://img.shields.io/badge/Codeforces-Expert-1F8ACB?style=for-the-badge&logo=codeforces&logoColor=white)
-![LeetCode](https://img.shields.io/badge/LeetCode-Guardian-FFA116?style=for-the-badge&logo=leetcode&logoColor=white)
+[![Codeforces](https://img.shields.io/badge/Codeforces-Expert-1F8ACB?style=for-the-badge&logo=codeforces&logoColor=white)](https://codeforces.com/profile/Dilha_1526)
+[![CodeChef](https://img.shields.io/badge/CodeChef-6%E2%98%85-5B4638?style=for-the-badge&logo=codechef&logoColor=white)](https://www.codechef.com/users/harsh_bajpai)
 
 ---
 
@@ -173,7 +173,7 @@ in a crisis — **presented to the Prime Minister of India**.*
 
 ## 🏆 Highlights & achievements
 
-- 🧮 **Competitive programming** — Codeforces **Expert** · LeetCode **Guardian** · CodeChef **6★**
+- 🧮 **Competitive programming** — [Codeforces **Expert**](https://codeforces.com/profile/Dilha_1526) · [CodeChef **6★**](https://www.codechef.com/users/harsh_bajpai)
 - 🎯 **AIR 74 — JEE Advanced 2026** · **AIR 44 — JEE Mains 2026** · **AIR 3 — IOQM 2022** · AIR 69 — UGEE 2025
 - 🥇 **EZHEALTH presented to the Prime Minister of India** · **Gold Award**, INEX International Innovation &
   Invention Expo 2022 (represented India)
