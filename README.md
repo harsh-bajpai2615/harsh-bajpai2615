@@ -13,7 +13,7 @@ seams (keep the language model away from anything that must be exact), real test
 in small, verified increments.
 
 I come from a **competitive-programming and olympiad** background — Codeforces Expert, AIR 3 in the
-Indian Maths Olympiad Qualifier, AIR 74 in JEE Advanced 2026 — which shows up in how I reason about
+Indian Maths Olympiad Qualifier — which shows up in how I reason about
 systems, edge cases, and performance. These days I spend most of my time building **production
 generative-AI products**: LLM orchestration, generative-media pipelines, and the full-stack apps and
 cloud infrastructure around them.
