@@ -178,7 +178,7 @@ in a crisis — **presented to the Prime Minister of India**.*
 ## 🏆 Highlights & achievements
 
 - 🧮 **Competitive programming** — [Codeforces **Expert**](https://codeforces.com/profile/Dilha_1526) · [CodeChef **6★**](https://www.codechef.com/users/harsh_bajpai)
-- 🎯 **AIR 74 — JEE Advanced 2026** · **AIR 44 — JEE Mains 2026** · **AIR 3 — IOQM 2022** · AIR 69 — UGEE 2025
+- 🎯 **AIR 3 — IOQM 2022**
 - 🥇 **EZHEALTH presented to the Prime Minister of India** · **Gold Award**, INEX International Innovation &
   Invention Expo 2022 (represented India)
 - 🏅 Top 100 — ATL Marathon 2022-23 · Top 20 — TechExpo, IIT Guwahati · Global Innovation **Impact** &
