@@ -183,7 +183,7 @@ in a crisis — **presented to the Prime Minister of India**.*
   Invention Expo 2022 (represented India)
 - 🏅 Top 100 — ATL Marathon 2022-23 · Top 20 — TechExpo, IIT Guwahati · Global Innovation **Impact** &
   **Communication** Awards (Invent Future Global)
-- 🎓 Pursuing a **dual undergraduate degree** — IIT Madras (Data Science) + Macquarie University, Sydney (IT)
+- 🎓 Pursuing a **dual undergraduate degree** — IIT Madras (Data Science)
 
 ---
 
