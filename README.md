@@ -170,7 +170,6 @@ in a crisis — **presented to the Prime Minister of India**.*
 ## 🎓 Education
 
 - **Indian Institute of Technology, Madras** — B.S. in Data Science & Applications · *2026 – 2030*
-- **Macquarie University, Sydney, Australia** — Bachelor of Information Technology · *2026 – 2029*
 - **Senior Secondary (Class XII), CBSE — Kota, Rajasthan** — Physics, Chemistry, Mathematics · *2023 – 2025*
 
 ---
