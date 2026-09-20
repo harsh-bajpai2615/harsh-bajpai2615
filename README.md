@@ -18,7 +18,7 @@ systems, edge cases, and performance. These days I spend most of my time buildin
 generative-AI products**: LLM orchestration, generative-media pipelines, and the full-stack apps and
 cloud infrastructure around them.
 
-🎓 Incoming at **IIT Madras** (B.S. Data Science) & **Macquarie University, Sydney** (B.IT) &nbsp;·&nbsp; 💼 AI Product Developer @ **DigiFab Media LLC** &nbsp;·&nbsp; 📍 Rewa, India
+🎓 Incoming at **IIT Madras** (B.S. Data Science) &nbsp;·&nbsp; 💼 AI Product Developer @ **DigiFab Media LLC** &nbsp;·&nbsp; 📍 Rewa, India
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/harsh-bajpai2007)
 [![Email](https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:harshmusic2007@gmail.com)
