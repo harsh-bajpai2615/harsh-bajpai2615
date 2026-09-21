@@ -157,6 +157,7 @@ price in sixty seconds.*
 | **[gitkosh](https://github.com/harsh-bajpai2615/gitkosh)** | A macOS DSA workspace — NeetCode 150 + Blind 75 in a built-in editor with streaming AI review, most-asked questions for **657 companies**, mock-interview mode with a scorecard, an algorithm visualizer, spaced-repetition revision, and auto-sync of your LeetCode / Codeforces / CodeChef / AtCoder / GfG solves to GitHub with AI-written per-problem write-ups. `Python` · macOS app |
 | **[leadnest](https://github.com/harsh-bajpai2615/leadnest)** | A lead *platform*, not a lead form — public capture feeds an authenticated pipeline with assignment, stages, notes and a full activity trail; admin/member permissions enforced on **both** client and server. [Live demo](https://leadnest-flame.vercel.app). `Next.js 16 + Prisma 7` |
 | **[hp-m1005-macos-driver](https://github.com/harsh-bajpai2615/hp-m1005-macos-driver)** | A working driver for the HP LaserJet M1005 MFP on Apple Silicon — one-command installer bundling foo2zjs/foo2xqx + Ghostscript, no Homebrew needed. Scratched my own itch; turned out a lot of people had it. |
+| **[pdf-text-edit](https://github.com/harsh-bajpai2615/pdf-text-edit)** | Changes words *inside* a PDF while keeping them **real, selectable text** — it rewrites the page's content stream rather than white-boxing an overlay. Handles the three things that silently produce a plausible-but-wrong file: absolute `Td` positions that need every later word shifted, subset fonts where the glyph you need has **no outline**, and Identity encoding where glyph id ≠ character code. Verifies by pixel-diffing the render, not just the text. `Python` |
 | **[competitive-programming](https://github.com/harsh-bajpai2615/competitive-programming)** | My C++ solutions across Codeforces, LeetCode and CodeChef. |
 
 ---
@@ -171,7 +172,6 @@ the best spec you can get.
 - **MPCA Match Referee** — a Hindi-first Android app for my father's cricket match-referee practical exam. Fully **offline**, v2.5, built as the companion to two printed study booklets (100 pp theory + 126 pp practical) I typeset from the official forms.
 
 **🛠️ Developer & document tooling**
-- **pdf-text-edit** — changes words *inside* a PDF while keeping them **real, selectable text**. Not a white-box-and-overlay hack; it rewrites the content stream and subsets the font.
 - **deck-kit** — a pipeline that builds animated, interactive teaching decks as genuine `.pptx`. Produced five NCERT maths decks (Classes VI–X).
 - **signal-export** — decrypts the local Signal Desktop database and exports every conversation to a readable HTML transcript (inline photos, video, audio, stickers, reactions) plus structured JSON.
 
