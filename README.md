@@ -1,94 +1,150 @@
 <!--
-  GitHub PROFILE README for github.com/harsh-bajpai-2615 (repo: harsh-bajpai2615/harsh-bajpai2615)
-  Phone intentionally omitted (public page). Codeforces + CodeChef badges link to verified profiles.
+  GitHub PROFILE README — github.com/harsh-bajpai2615 (repo: harsh-bajpai2615/harsh-bajpai2615)
+  Phone intentionally omitted (public page). All competitive-programming badges link to verified profiles.
 -->
 
 # Hi, I'm Harsh Bajpai 👋
 
-### Full-Stack & Generative-AI Engineer — I build and ship AI products end to end.
+### AI Product Developer · Full-Stack & Generative-AI Engineer
 
-I take ideas all the way to production — system architecture, multi-stage AI pipelines, the
-full-stack app, and the cloud deploy — usually as the **sole developer**. I care about clean
-seams (keep the language model away from anything that must be exact), real tests, and shipping
-in small, verified increments.
+I take products from an empty repo to something real people use — architecture, multi-stage AI
+pipelines, the full-stack app, and the production deploy — usually as the **sole developer**.
+Four products of mine are live right now: a wedding marketplace, an app on Google Play, a
+consumer AI platform, and an internal tool that runs unattended every night.
 
-I come from a **competitive-programming and olympiad** background — Codeforces Expert, AIR 3 in the
-Indian Maths Olympiad Qualifier — which shows up in how I reason about
-systems, edge cases, and performance. These days I spend most of my time building **production
-generative-AI products**: LLM orchestration, generative-media pipelines, and the full-stack apps and
-cloud infrastructure around them.
+I care about **clean seams** — keep the language model away from anything that must be exact —
+real tests over vanity coverage, and shipping in small verified increments.
 
-🎓 Incoming at **IIT Madras** (B.S. Data Science) &nbsp;·&nbsp; 💼 AI Product Developer @ **DigiFab Media LLC** &nbsp;·&nbsp; 📍 Rewa, India
+🎓 **IIM Mumbai** (B.S. Digital Science & Business Management) **+ IIT Madras** (B.S. Data Science) &nbsp;·&nbsp;
+💼 AI Product Developer @ **DigiFab Media LLP** &nbsp;·&nbsp; 📍 Rewa, India
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/harsh-bajpai2007)
 [![Email](https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:harshmusic2007@gmail.com)
 &nbsp;
+![LeetCode](https://img.shields.io/badge/LeetCode-Guardian%20%7C%202606-FFA116?style=for-the-badge&logo=leetcode&logoColor=black)
 [![Codeforces](https://img.shields.io/badge/Codeforces-Expert-1F8ACB?style=for-the-badge&logo=codeforces&logoColor=white)](https://codeforces.com/profile/Dilha_1526)
 [![CodeChef](https://img.shields.io/badge/CodeChef-6%E2%98%85-5B4638?style=for-the-badge&logo=codechef&logoColor=white)](https://www.codechef.com/users/harsh_bajpai)
 
 ---
 
-## 🚀 Featured projects
+## 🔭 What I'm building right now
 
-### 🪔 Vivahub — AI-powered wedding & events marketplace &nbsp;·&nbsp; *current*
+### 🛡️ Aavaran — a browser agent that never sees your PII &nbsp;·&nbsp; *Smart India Hackathon 2026 · SIH26171 (ISRO / Dept. of Space)*
+
+*A small model runs **inside your browser**, reads the page, and replaces every PAN, Aadhaar
+number, card, password and face with a typed tag — **before any network request is made**.
+A larger open-weight model reasons over the censored page and returns one instruction
+("click Submit") that your browser carries out. The server does the thinking. It never learns
+your PAN, your account number, or what you look like.*
+
+- **Two on-device ONNX models, in the browser.** A face detector and **MobileViT-small** crop
+  classifier run on **WebGPU** (~10 ms/crop) with a measured WASM fallback — because the DOM
+  can tell you an `<img>` exists but not that there's a human being in it.
+- **Checksums are the differentiator, not regexes.** `/\d{12}/` flags every order number on the
+  page and torches precision. Aavaran gates each candidate on a real validator — **Verhoeff**
+  for Aadhaar, **Luhn** for cards, plus PAN / GSTIN / IFSC / Indian-mobile structure — turning a
+  recall-heavy pattern into a precision-heavy detector.
+- **Redaction is reversible, locally.** Detected values go to a typed tag (`<PAN_1>`) with the
+  real value held in a client-side vault, so the agent can still *fill* a field it was never
+  allowed to *read*.
+- **Reasoning stays open-weight and self-hosted** — Qwen2.5-VL 7B on Ollama behind a FastAPI
+  server, warmed and held resident (~17 s cold, ~4 s warm).
+- **Shipped as a real release** — **v0.4.0**, Chrome (MV3) + Firefox builds, one-command
+  `setup.sh`, **32/32 tests green**, TypeScript at **0 errors** with the gate covering every one.
+
+`TypeScript` · `ONNX Runtime Web / WebGPU` · `Chrome MV3 + Firefox` · `FastAPI` · `Ollama / Qwen2.5-VL` · `esbuild`
+
+> Repo is private through the SIH judging window — happy to walk through the code or demo it.
+
+---
+
+## 🚀 Shipped products
+
+### 🪔 The Joy Lane — wedding-services marketplace & planner SaaS &nbsp;·&nbsp; [`thejoylane.in`](https://thejoylane.in) &nbsp;·&nbsp; *live*
+
 *One place for every venue and vendor — and an AI that turns a few details into a real, itemised
 price in sixty seconds.*
 
-The Indian wedding market is enormous, but pricing is a black box — couples fill a form and wait
-days for a callback. Vivahub gives an instant, transparent, itemised quote and turns it into a
-qualified lead.
+- **A live two-sided platform listing 8,000+ vendors** — SEO-prerendered marketplace pages, plus a
+  **₹999/month planner SaaS** carrying vendor leads, proposals, contracts and invoicing.
+- **Quotes are reproducible, not hallucinated.** A **deterministic quote engine** does
+  occasion-aware selection over calibrated price bands; the LLM only parses free text into a
+  structured request. A quote can never invent a number.
+- **Hardened end to end** — RBAC, JWT with **server-side revocation**, TOTP 2FA, phone-OTP signup,
+  rate limiting, on Docker + nginx — behind **340+ automated tests**.
+- **No LLM vendor lock-in** — the provider sits behind one interface; **Gemini or Claude swap
+  without a code change**.
+- **I built the analytics layer myself**, so live usage and failures are visible in-product —
+  **3,100+ events over 2,700+ unique sessions**, per-page breakdowns and error tracking.
 
-- **Trustworthy by design.** Prices come from a **deterministic pricing engine** — per-category bands
-  scaled by city tier, season and day, with **empirical-Bayes shrinkage** for thin data — while the LLM
-  only parses free text into a structured request and writes the summary. A quote can never
-  *hallucinate* a number.
-- **A self-improving price model.** Every completed escrow booking writes the real **transacted** price
-  back into the dataset; the engine blends those booked prices toward the seed prior, so quotes get
-  sharper the more the platform is used (the "flywheel").
-- **WhatsApp-native — two bots.** Stateful conversation engines on the **WhatsApp Cloud API** run the
-  whole funnel in chat: a *couple* bot (free text → itemised quote → capped, qualified lead) and a
-  *vendor-onboarding* bot (list a business in a minute), with an offline simulator for testing.
-- **Escrow bookings + a vendor OS.** Full booking lifecycle (deposit → confirm → release) with a
-  take-rate, a reviews system (*verified* = booked on-platform), and a vendor dashboard for leads,
-  payouts and calendar availability.
-- **Provider-pluggable AI + cost ledger.** Swap **Gemini ↔ Claude** with one env var; every call is
-  metered into an append-only spend ledger. Programmatic-SEO landing pages + a sitemap for organic reach.
-- **Built to run** — clean separation of concerns, **34 passing tests**, a hermetic test suite, and a
-  one-command local setup.
+`FastAPI` · `Postgres` · `Next.js` · `React 19 + Tailwind` · `Gemini / Claude` · `Docker + nginx`
 
-`FastAPI` · `SQLAlchemy / Postgres` · `React 19 + Vite + Tailwind` · `Gemini / Claude` · `WhatsApp Cloud API` · `escrow payments` · `Docker`
+### 📱 Amora — AI companion app, iOS + Android &nbsp;·&nbsp; [`Google Play`](https://play.google.com/store/apps/details?id=com.nexralabs.amora) &nbsp;·&nbsp; *live*
 
-### 🎬 ClipTrip — AI travel-video generator (Reels + YouTube) &nbsp;·&nbsp; *2026*
-*Turns 5–20 raw travel clips into ready-to-post 20–40s 9:16 Reels and long-form 16:9 cuts —
-AI handles footage understanding, narrative editing, captions, and music.*
+- **One Flutter codebase to both stores** — streaming chat, low-latency voice calls and a
+  generated-image pipeline, served over a **Node proxy** fronting Gemini that holds key custody
+  and enforces rate limits (the client never sees a key).
+- **Release engineering owned end to end** — signed App Bundle, HTTPS legal pages, content-rating
+  and data-safety declarations, live SKUs (₹499/mo · ₹2,999/yr).
+- **Every build releasable** behind **57 passing tests** plus analyzer and type-check gates, with
+  all store artwork generated from a single script.
 
-- **A 7-stage AI pipeline** orchestrated on **FastAPI + Celery + Redis**: Gemini-driven per-clip
-  analysis & narrative edit-planning → **librosa** beat-synced cutting → saliency-aware 9:16 reframing
-  (**OpenCV / YuNet** face detection) → caption rendering → **ffmpeg** render with −14 LUFS
-  loudness-normalised audio.
-- **Reliability for long-running jobs** — Celery auto-retry with failure alerting, per-job locking, and
-  durable progress, so a multi-minute render never silently dies.
-- **A real product, not a demo** — React 19 + Tailwind frontend with a light in-browser editor, usage
-  metering, tiered INR pricing, and Razorpay checkout; Firebase auth.
-- **Cost-aware by design** — per-trip cost ledgers cap AI/media spend at **~₹40 per reel**; shipped with
-  **26 passing tests**, Dockerised on **DigitalOcean**.
+`Flutter / Dart` · `Node proxy` · `Gemini` · `Play Console release engineering`
 
-`FastAPI` · `Celery + Redis` · `Gemini` · `librosa` · `OpenCV / YuNet` · `ffmpeg` · `React 19` · `Razorpay` · `Firebase` · `DigitalOcean`
+### 💬 Caramia — consumer AI companion web platform &nbsp;·&nbsp; *live*
+
+- **A full consumer platform** on **Next.js 15 + Firebase + FastAPI** — character catalogue,
+  real-time chat and voice, image generation, live video rooms, an admin console and a
+  27-article help centre.
+- **Generated video at $0.047/clip** (~$1.50–2 per episode) via a self-hosted diffusion pipeline
+  on rented A6000 GPUs — automated shot generation, upscaling, VO timing, caption/music assembly.
+- **Monetisation enforced server-side** — tier-gated characters, per-day quotas, a token ledger,
+  and an idempotent, probe-verified paywall.
+- **Root-caused a WebKit autoplay latch** that broke hands-off desktop video (`play()` at
+  `readyState 0` latches gesture-required), then shipped gapless chaining on top.
+
+`Next.js 15` · `Firebase` · `FastAPI` · `self-hosted diffusion` · `A6000 GPUs`
+
+### 🎬 ClipTrip — AI travel-video generator (Reels + YouTube) &nbsp;·&nbsp; *live*
+
+*Turns 5–20 raw travel clips into ready-to-post 20–40 s 9:16 Reels and long-form 16:9 cuts.*
+
+- **A 7-stage AI pipeline** on **FastAPI + Celery + Redis**: Gemini per-clip analysis and
+  narrative edit-planning → **librosa** beat-synced cutting → saliency-aware 9:16 reframing
+  (**OpenCV / YuNet**) → caption rendering → **ffmpeg** render at −14 LUFS.
+- **Regional captions** — Hindi, Marathi, Nepali and Hinglish, with the glyph and shaping layers
+  proved separately offline.
+- **Long jobs survive failure** — Celery auto-retry with alerting, per-job locking, durable
+  progress, so a multi-minute render never silently dies.
+- **Cost-aware** — per-trip ledgers cap spend at **~₹40 per reel**; **108 passing tests**,
+  Dockerised on DigitalOcean.
+
+`FastAPI` · `Celery + Redis` · `Gemini` · `librosa` · `OpenCV` · `ffmpeg` · `React 19` · `Razorpay`
 
 ### ❤️ EZHEALTH — emergency healthcare alert system &nbsp;·&nbsp; *2022*
-*An IoT remote health-monitoring device that streams vitals to the cloud and auto-alerts doctors
-in a crisis — **presented to the Prime Minister of India**.*
 
-- **Real-time vitals → cloud.** A NodeMCU / ESP8266 device streams **Pulse Rate & Temperature to the
-  cloud every 15 seconds**.
-- **Automatic escalation.** Auto-alerts doctors by **email and phone call** on abnormal readings
-  (>140 BPM / >37 °C) — built for rapid emergency response.
-- **Full custom hardware.** 95%-accurate sensors on a **custom-designed PCB** in a 3D-printed
-  polycarbonate enclosure (C++ / Arduino).
-- 🥇 **Gold Award**, INEX International Innovation & Invention Expo 2022 (represented India) — and
-  **presented to the Prime Minister of India**. &nbsp; [Demo](http://tinyurl.com/ezhealth-pm)
+*An IoT device that streams vitals to the cloud and auto-alerts doctors in a crisis — built at
+**age 14** in an Atal Tinkering Lab, and **presented to the Prime Minister of India**.*
 
-`C++` · `Arduino` · `NodeMCU / ESP8266` · `custom PCB` · `3D design` · `IoT sensors`
+- NodeMCU / ESP8266 streaming **pulse and temperature to the cloud every 15 s**; out-of-range
+  readings trigger an **automatic email and VoIP call** to doctors and relatives.
+- 95%-accurate sensors on a **custom-designed PCB** in a 3D-printed enclosure — a **~₹1,800** build.
+- 🥇 **Gold Award**, INEX International Innovation & Invention Expo 2022 (represented India) ·
+  presented at **Pariksha Pe Charcha** · covered by The Logical Indian and DD News ·
+  recognised by the Atal Innovation Mission. &nbsp;[Demo](http://tinyurl.com/ezhealth-pm)
+
+`C++` · `Arduino` · `NodeMCU / ESP8266` · `custom PCB` · `IoT sensors`
+
+---
+
+## 📦 Public repos
+
+| Repo | What it is |
+| --- | --- |
+| **[gitkosh](https://github.com/harsh-bajpai2615/gitkosh)** | A macOS DSA workspace — NeetCode 150 + Blind 75 in a built-in editor with streaming AI review, most-asked questions for **657 companies**, mock-interview mode, spaced repetition, and auto-sync of your LeetCode / Codeforces / CodeChef / AtCoder solves to GitHub with AI-written write-ups. `Python` |
+| **[leadnest](https://github.com/harsh-bajpai2615/leadnest)** | A lead *platform*, not a lead form — public capture feeds an authenticated pipeline with assignment, stages, notes and a full activity trail; admin/member permissions enforced on **both** client and server. [Live demo](https://leadnest-flame.vercel.app). `Next.js 16 + Prisma 7` |
+| **[hp-m1005-macos-driver](https://github.com/harsh-bajpai2615/hp-m1005-macos-driver)** | A working driver for the HP LaserJet M1005 MFP on Apple Silicon — one-command installer bundling foo2zjs/foo2xqx + Ghostscript, no Homebrew needed. Scratched my own itch; it turned out a lot of people had it. |
+| **[competitive-programming](https://github.com/harsh-bajpai2615/competitive-programming)** | My C++ solutions across Codeforces, LeetCode and CodeChef. |
 
 ---
 
@@ -96,29 +152,34 @@ in a crisis — **presented to the Prime Minister of India**.*
 
 **Languages**&nbsp;
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=typescript&logoColor=white)
 ![C++](https://img.shields.io/badge/C++-00599C?style=flat&logo=cplusplus&logoColor=white)
+![Dart](https://img.shields.io/badge/Dart-0175C2?style=flat&logo=dart&logoColor=white)
 ![Java](https://img.shields.io/badge/Java-007396?style=flat&logo=openjdk&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
 ![Rust](https://img.shields.io/badge/Rust-000000?style=flat&logo=rust&logoColor=white)
 ![SQL](https://img.shields.io/badge/SQL-4479A1?style=flat&logo=postgresql&logoColor=white)
 
 **AI / ML**&nbsp;
 ![Gemini](https://img.shields.io/badge/Google%20Gemini-8E75B2?style=flat&logo=googlegemini&logoColor=white)
 ![Claude](https://img.shields.io/badge/Claude-D97757?style=flat&logo=anthropic&logoColor=white)
-&nbsp;LLM orchestration · prompt engineering · RAG · generative-AI media pipelines · NLP
+![ONNX](https://img.shields.io/badge/ONNX%20Runtime-005CED?style=flat&logo=onnx&logoColor=white)
+![Ollama](https://img.shields.io/badge/Ollama-000000?style=flat&logo=ollama&logoColor=white)
+&nbsp;LLM orchestration · RAG · on-device inference (WebGPU) · generative-media pipelines · NLP
 
 **Backend**&nbsp;
 ![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat&logo=fastapi&logoColor=white)
-![SQLAlchemy](https://img.shields.io/badge/SQLAlchemy-D71F00?style=flat&logo=sqlalchemy&logoColor=white)
 ![Celery](https://img.shields.io/badge/Celery-37814A?style=flat&logo=celery&logoColor=white)
 ![Redis](https://img.shields.io/badge/Redis-DC382D?style=flat&logo=redis&logoColor=white)
 ![Postgres](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat&logo=postgresql&logoColor=white)
-![WhatsApp Cloud API](https://img.shields.io/badge/WhatsApp_Cloud_API-25D366?style=flat&logo=whatsapp&logoColor=white)
+![Prisma](https://img.shields.io/badge/Prisma-2D3748?style=flat&logo=prisma&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white)
+![nginx](https://img.shields.io/badge/nginx-009639?style=flat&logo=nginx&logoColor=white)
 ![Pytest](https://img.shields.io/badge/Pytest-0A9EDC?style=flat&logo=pytest&logoColor=white)
 
-**Frontend**&nbsp;
+**Frontend & Mobile**&nbsp;
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat&logo=nextdotjs&logoColor=white)
 ![React](https://img.shields.io/badge/React%2019-61DAFB?style=flat&logo=react&logoColor=black)
+![Flutter](https://img.shields.io/badge/Flutter-02569B?style=flat&logo=flutter&logoColor=white)
 ![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat&logo=vite&logoColor=white)
 ![Tailwind](https://img.shields.io/badge/Tailwind-06B6D4?style=flat&logo=tailwindcss&logoColor=white)
 
@@ -126,81 +187,84 @@ in a crisis — **presented to the Prime Minister of India**.*
 ![Git](https://img.shields.io/badge/Git-F05032?style=flat&logo=git&logoColor=white)
 ![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat&logo=linux&logoColor=black)
 ![DigitalOcean](https://img.shields.io/badge/DigitalOcean-0080FF?style=flat&logo=digitalocean&logoColor=white)
+![Vercel](https://img.shields.io/badge/Vercel-000000?style=flat&logo=vercel&logoColor=white)
+![Firebase](https://img.shields.io/badge/Firebase-DD2C00?style=flat&logo=firebase&logoColor=white)
 ![AWS S3](https://img.shields.io/badge/AWS%20S3-569A31?style=flat&logo=amazons3&logoColor=white)
-![Razorpay](https://img.shields.io/badge/Razorpay-0C2451?style=flat&logo=razorpay&logoColor=white)
 ![ffmpeg](https://img.shields.io/badge/ffmpeg-007808?style=flat&logo=ffmpeg&logoColor=white)
 
 ---
 
 ## 💼 Experience
 
-### DigiFab Media LLC — AI Product Developer / Full-Stack Developer
+### DigiFab Media LLP — AI Product Developer / Full-Stack Developer
 *Jun 2026 – Present · Remote*
-- Own **end-to-end** development of AI-powered media products as the **sole developer** — from system
-  architecture and multi-stage AI pipelines to the full-stack app and production cloud deployment.
-- Build production generative-AI workflows around LLMs (Google Gemini) and generative-media APIs with
-  **hardened JSON parsing, graceful fallbacks, and per-job cost telemetry that caps AI spend (~₹40/output)**.
-- Engineer reliability for long-running media jobs — Celery auto-retry with failure alerts, per-job
-  locking, and durable progress — shipping features in small, tested increments to `main`.
+- Own **end-to-end** development of AI-powered media and marketplace products as the **sole
+  developer** — architecture, multi-stage AI pipelines, full-stack build, production deploy.
+- Built and run **NicheLock**, an autonomous domain-acquisition scout: it sweeps **300 niches**
+  nightly, classifies **34,000+ domains** against a live snapshot store, and keeps **7,600+**
+  vetted listings current — self-running, behind **86 in-container smoke checks** plus a
+  guard that refuses to serve stale data.
+- Ship production generative-AI workflows with **hardened JSON parsing, graceful fallbacks, and
+  per-job cost telemetry that caps AI spend (~₹40/output)**.
+- Engineer reliability for long-running jobs — Celery auto-retry with alerting, per-job locking,
+  durable progress — behind blue/green deploys with health-checked rollback.
 
 ### Meta — Content Review Intern · Trust & Safety
 *Apr 2020 – Jan 2022 · Remote*
-- Reviewed and classified **1,000+ pieces of online content** using Meta's **Single Review Tool (SRT)**,
-  sustaining a **98% accuracy rate** against platform policy at high throughput.
-- Enforced platform **trust & safety** standards during **large-scale content-moderation operations** —
-  identifying and flagging sensitive and policy-violating material (e.g. graphic, hateful, or misleading
-  content) and applying nuanced policy judgement under tight quality and time targets.
-- Helped keep content surfaces safe for a global user base, working to strict precision and consistency
-  benchmarks on a remote moderation team.
+- Reviewed and classified **1,000+ pieces of online content** in Meta's Single Review Tool,
+  sustaining **98% accuracy** against platform policy at high throughput.
+- Applied nuanced policy judgement on sensitive and policy-violating material during large-scale
+  content-moderation operations, to strict precision and consistency benchmarks.
 
 ### Appen — Independent Contractor · AI Data & NLP
 *Mar 2020 – Sep 2022 · Remote*
-- Evaluated and refined **500+ AI dataset prompts**, improving dataset accuracy and safety for
+- Refined **500+ AI dataset prompts**, improving dataset accuracy and safety for
   language-focused annotation and model-training tasks.
-- Built scalable **quality-assurance frameworks** to streamline multilingual review and annotation
-  workflows.
+- Built the **quality-assurance frameworks** reviewers worked to across multilingual workflows.
 
 ### Mathematics Mentor — Independent
 *Apr 2025 – Jul 2025*
-- Mentored **50+ students** in advanced problem-solving (number theory, combinatorics, geometry) for the
-  Indian Olympiad Qualifier in Mathematics (IOQM), designing simplified curricula that lifted performance.
+- Mentored **50+ students** for the Indian Olympiad Qualifier in Mathematics — **10 cleared IOQM
+  and 4 went on to RMO** — designing simplified curricula for number theory, combinatorics and geometry.
 
 ---
 
 ## 🎓 Education
 
-- **Indian Institute of Technology, Madras** — B.S. in Data Science & Applications · *2026 – 2030*
-- **Senior Secondary (Class XII), CBSE — Kota, Rajasthan** — Physics, Chemistry, Mathematics · *2023 – 2025*
+- **Indian Institute of Management, Mumbai** — B.S. in Digital Science & Business Management · *2026 – 2030*
+- **Indian Institute of Technology, Madras** — B.S. in Data Science & Applications (online) · *2026 – 2030*
+- **Maa Bharti Senior Secondary School, Kota** — Class XII, CBSE (PCM) · *2023 – 2025*
 
 ---
 
-## 🏆 Highlights & achievements
+## 🏆 Highlights
 
-- 🧮 **Competitive programming** — [Codeforces **Expert**](https://codeforces.com/profile/Dilha_1526) · [CodeChef **6★**](https://www.codechef.com/users/harsh_bajpai)
-- 🎯 **AIR 3 — IOQM 2022**
-- 🥇 **EZHEALTH presented to the Prime Minister of India** · **Gold Award**, INEX International Innovation &
-  Invention Expo 2022 (represented India)
-- 🏅 Top 100 — ATL Marathon 2022-23 · Top 20 — TechExpo, IIT Guwahati · Global Innovation **Impact** &
-  **Communication** Awards (Invent Future Global)
-- 🎓 Pursuing a **dual undergraduate degree** — IIT Madras (Data Science)
+- 🧮 **Competitive programming** — LeetCode **Guardian**, rating 2606 (top 1%) · [Codeforces **Expert**](https://codeforces.com/profile/Dilha_1526) · [CodeChef **6★**](https://www.codechef.com/users/harsh_bajpai) · AtCoder **Cyan**
+- 🎯 **AIR 3 — IOQM 2022** · AIR 69, UGEE 2025 · qualified **NSEP / NSEC / NSEA**
+- 🥇 **EZHEALTH presented to the Prime Minister of India** · **Gold Award**, INEX Innovation & Invention Expo 2022 (represented India)
+- 🏅 Top 20, TechExpo IIT Guwahati · Top 30 & 300, ATL Marathon · Top 75, ATL Space Challenge · Young Inventors Challenge (NCSTC) · Global Innovation **Impact** & **Communication** Awards
+- 🎖️ **NCC Best Cadet**, CATC Sagar (2023)
 
 ---
 
 ## 🛠️ How I work
 
-- **Ship end to end.** I'm comfortable owning a product from the data model to production.
-- **Test what matters.** Real, focused test suites — I trust code I can re-run, not vanity coverage.
-- **Clear seams.** Keep the language model away from anything that must be exact; make providers
-  swappable; meter what you spend. Boring, well-bounded systems beat clever fragile ones.
-- **Build for reality.** The channel users actually use, the cost per call, the unit economics —
-  not just the happy path.
+- **Ship end to end.** Data model to production deploy. I'd rather own the whole seam than hand it off.
+- **Keep the model away from what must be exact.** Deterministic engines compute the number; the
+  LLM parses intent and writes prose. That's why a Joy Lane quote can't hallucinate a price and
+  Aavaran's PII detector gates on a checksum, not a regex.
+- **Test what matters.** Focused suites I actually re-run — 340+ on Joy Lane, 108 on ClipTrip,
+  57 on Amora, 32 on Aavaran — not coverage theatre.
+- **Meter what you spend.** Per-job cost ledgers, hard caps, provider abstraction. Unit economics
+  are a feature, not an afterthought.
+- **Verify the artefact, not the endpoint.** A 200 is not proof. I check the thing users receive.
 
 ---
 
 ## 🌟 Beyond the code
 
 - 🗣️ **Languages** — English, Hindi
-- 🎼 **Interests** — National-level **Yoga** · **Tabla** (Sangeet Prabhakar)
+- 🎼 **Interests** — National-level **Yoga** · **Tabla** (Sangeet Prabhakar); played harmonium at India Gate
 - 🎤 **Conferences** — IIT Bombay E-Summit (2023) · Maker Fest, Vadodara (2024) · INEX Innovation Expo, Goa (2022)
 - 🤝 **Volunteering** — Vidyanjali Platform, Special Campaign 5.0 (2025)
 
@@ -208,5 +272,6 @@ in a crisis — **presented to the Prime Minister of India**.*
 
 ## 📫 Let's talk
 
-I'm open to roles where I can own real product end to end.
+I'm open to remote and contract roles where I can own real product end to end.
+
 📧 **harshmusic2007@gmail.com** &nbsp;·&nbsp; 💼 [LinkedIn](https://linkedin.com/in/harsh-bajpai2007)
