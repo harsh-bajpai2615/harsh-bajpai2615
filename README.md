@@ -158,6 +158,7 @@ price in sixty seconds.*
 | **[leadnest](https://github.com/harsh-bajpai2615/leadnest)** | A lead *platform*, not a lead form — public capture feeds an authenticated pipeline with assignment, stages, notes and a full activity trail; admin/member permissions enforced on **both** client and server. [Live demo](https://leadnest-flame.vercel.app). `Next.js 16 + Prisma 7` |
 | **[hp-m1005-macos-driver](https://github.com/harsh-bajpai2615/hp-m1005-macos-driver)** | A working driver for the HP LaserJet M1005 MFP on Apple Silicon — one-command installer bundling foo2zjs/foo2xqx + Ghostscript, no Homebrew needed. Scratched my own itch; turned out a lot of people had it. |
 | **[pdf-text-edit](https://github.com/harsh-bajpai2615/pdf-text-edit)** | Changes words *inside* a PDF while keeping them **real, selectable text** — it rewrites the page's content stream rather than white-boxing an overlay. Handles the three things that silently produce a plausible-but-wrong file: absolute `Td` positions that need every later word shifted, subset fonts where the glyph you need has **no outline**, and Identity encoding where glyph id ≠ character code. Verifies by pixel-diffing the render, not just the text. `Python` |
+| **[deck-kit](https://github.com/harsh-bajpai2615/deck-kit)** | Builds animated, interactive teaching decks as **real `.pptx`** — click-by-click reveals, a clickable mind map, working quiz slides. `pptxgenjs` cannot write animations at all, so the build runs two passes and the second one injects the `<p:timing>` XML directly. Ships a font auditor that fails the build on any glyph the target font lacks — because LibreOffice fakes them in a preview and PowerPoint shows empty boxes. `Node + Python` |
 | **[competitive-programming](https://github.com/harsh-bajpai2615/competitive-programming)** | My C++ solutions across Codeforces, LeetCode and CodeChef. |
 
 ---
@@ -172,7 +173,6 @@ the best spec you can get.
 - **MPCA Match Referee** — a Hindi-first Android app for my father's cricket match-referee practical exam. Fully **offline**, v2.5, built as the companion to two printed study booklets (100 pp theory + 126 pp practical) I typeset from the official forms.
 
 **🛠️ Developer & document tooling**
-- **deck-kit** — a pipeline that builds animated, interactive teaching decks as genuine `.pptx`. Produced five NCERT maths decks (Classes VI–X).
 - **signal-export** — decrypts the local Signal Desktop database and exports every conversation to a readable HTML transcript (inline photos, video, audio, stickers, reactions) plus structured JSON.
 
 **🔊 Speech & audio pipelines**
