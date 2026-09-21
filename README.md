@@ -91,7 +91,7 @@ price in sixty seconds.*
 
 `Flutter / Dart` · `Node proxy` · `Gemini` · `Play Console release engineering`
 
-### 💬 Caramia — consumer AI companion web platform &nbsp;·&nbsp; *live*
+### 💬 Luvz — consumer AI companion web platform &nbsp;·&nbsp; [`luvz.ai`](https://luvz.ai) &nbsp;·&nbsp; *live*
 
 - **A full consumer platform** on **Next.js 15 + Firebase + FastAPI** — character catalogue,
   real-time chat and voice, image generation, live video rooms, an admin console and a
@@ -104,6 +104,19 @@ price in sixty seconds.*
   `readyState 0` latches gesture-required), then shipped gapless chaining on top.
 
 `Next.js 15` · `Firebase` · `FastAPI` · `self-hosted diffusion` · `A6000 GPUs`
+
+### 🔎 NicheLock — autonomous domain-acquisition scout &nbsp;·&nbsp; *DigiFab · runs nightly*
+
+- **Sweeps 300 niches every night, unattended** — classifies **34,000+ domains** against a live
+  snapshot store and keeps **7,600+** vetted listings current, with expiry state tracked so a
+  dead listing never shows as live.
+- **A guard that refuses to serve stale data** — `serve_guard` gates the feed, backed by **86
+  in-container smoke checks** plus 48 local tests, because an unattended system that fails
+  quietly is worse than one that stops.
+- **Hard-won lesson baked in:** a rate-limit refusal was being stored as the permanent fact
+  *"no snapshot exists"* — poisoning 10,782 domains. Now a refusal is retried, not recorded.
+
+`Python` · `Docker` · `nightly scheduling` · `snapshot-diff classification`
 
 ### 🎬 ClipTrip — AI travel-video generator (Reels + YouTube) &nbsp;·&nbsp; *live*
 
@@ -137,14 +150,34 @@ price in sixty seconds.*
 
 ---
 
-## 📦 Public repos
+## 📦 Open-source repos
 
 | Repo | What it is |
 | --- | --- |
-| **[gitkosh](https://github.com/harsh-bajpai2615/gitkosh)** | A macOS DSA workspace — NeetCode 150 + Blind 75 in a built-in editor with streaming AI review, most-asked questions for **657 companies**, mock-interview mode, spaced repetition, and auto-sync of your LeetCode / Codeforces / CodeChef / AtCoder solves to GitHub with AI-written write-ups. `Python` |
+| **[gitkosh](https://github.com/harsh-bajpai2615/gitkosh)** | A macOS DSA workspace — NeetCode 150 + Blind 75 in a built-in editor with streaming AI review, most-asked questions for **657 companies**, mock-interview mode with a scorecard, an algorithm visualizer, spaced-repetition revision, and auto-sync of your LeetCode / Codeforces / CodeChef / AtCoder / GfG solves to GitHub with AI-written per-problem write-ups. `Python` · macOS app |
 | **[leadnest](https://github.com/harsh-bajpai2615/leadnest)** | A lead *platform*, not a lead form — public capture feeds an authenticated pipeline with assignment, stages, notes and a full activity trail; admin/member permissions enforced on **both** client and server. [Live demo](https://leadnest-flame.vercel.app). `Next.js 16 + Prisma 7` |
-| **[hp-m1005-macos-driver](https://github.com/harsh-bajpai2615/hp-m1005-macos-driver)** | A working driver for the HP LaserJet M1005 MFP on Apple Silicon — one-command installer bundling foo2zjs/foo2xqx + Ghostscript, no Homebrew needed. Scratched my own itch; it turned out a lot of people had it. |
+| **[hp-m1005-macos-driver](https://github.com/harsh-bajpai2615/hp-m1005-macos-driver)** | A working driver for the HP LaserJet M1005 MFP on Apple Silicon — one-command installer bundling foo2zjs/foo2xqx + Ghostscript, no Homebrew needed. Scratched my own itch; turned out a lot of people had it. |
 | **[competitive-programming](https://github.com/harsh-bajpai2615/competitive-programming)** | My C++ solutions across Codeforces, LeetCode and CodeChef. |
+
+---
+
+## 🧱 Also built
+
+Smaller things I've shipped — most for a real person with a real problem, which is usually
+the best spec you can get.
+
+**📱 Apps**
+- **Shloka** — an Android devotional-shloka app built for my mother; offline-first, **46/46 tests** green on every release.
+- **MPCA Match Referee** — a Hindi-first Android app for my father's cricket match-referee practical exam. Fully **offline**, v2.5, built as the companion to two printed study booklets (100 pp theory + 126 pp practical) I typeset from the official forms.
+
+**🛠️ Developer & document tooling**
+- **pdf-text-edit** — changes words *inside* a PDF while keeping them **real, selectable text**. Not a white-box-and-overlay hack; it rewrites the content stream and subsets the font.
+- **deck-kit** — a pipeline that builds animated, interactive teaching decks as genuine `.pptx`. Produced five NCERT maths decks (Classes VI–X).
+- **signal-export** — decrypts the local Signal Desktop database and exports every conversation to a readable HTML transcript (inline photos, video, audio, stickers, reactions) plus structured JSON.
+
+**🔊 Speech & audio pipelines**
+- **Hindi TTS audiobook pipeline** — turns a scanned devotional PDF into per-chapter MP3s, **fully local and free**. The hard part wasn't the speech: the PDF stored text in a **Krutidev legacy font**, so it needed a glyph-level transcoder to Unicode before anything could read it.
+- **class-notes** — a Whisper-based pipeline that turns lecture recordings into structured, shareable class notes.
 
 ---
 
@@ -200,10 +233,8 @@ price in sixty seconds.*
 *Jun 2026 – Present · Remote*
 - Own **end-to-end** development of AI-powered media and marketplace products as the **sole
   developer** — architecture, multi-stage AI pipelines, full-stack build, production deploy.
-- Built and run **NicheLock**, an autonomous domain-acquisition scout: it sweeps **300 niches**
-  nightly, classifies **34,000+ domains** against a live snapshot store, and keeps **7,600+**
-  vetted listings current — self-running, behind **86 in-container smoke checks** plus a
-  guard that refuses to serve stale data.
+- Built and run **The Joy Lane**, **ClipTrip** and **NicheLock** — see above — each live in
+  production and each one mine end to end.
 - Ship production generative-AI workflows with **hardened JSON parsing, graceful fallbacks, and
   per-job cost telemetry that caps AI spend (~₹40/output)**.
 - Engineer reliability for long-running jobs — Celery auto-retry with alerting, per-job locking,
