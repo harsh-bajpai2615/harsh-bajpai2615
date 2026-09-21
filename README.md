@@ -23,7 +23,7 @@ real tests over vanity coverage, and shipping in small verified increments.
 &nbsp;
 [![LeetCode](https://img.shields.io/badge/LeetCode-Guardian%20%7C%202606%20%7C%20top%200.12%25-FFA116?style=for-the-badge&logo=leetcode&logoColor=black)](https://leetcode.com/u/Harsh2615/)
 [![Codeforces](https://img.shields.io/badge/Codeforces-Expert-1F8ACB?style=for-the-badge&logo=codeforces&logoColor=white)](https://codeforces.com/profile/Dilha_1526)
-[![CodeChef](https://img.shields.io/badge/CodeChef-6%E2%98%85-5B4638?style=for-the-badge&logo=codechef&logoColor=white)](https://www.codechef.com/users/harsh_bajpai)
+[![CodeChef](https://img.shields.io/badge/CodeChef-6%E2%98%85%20%7C%202225%20%7C%20%23233%20global-5B4638?style=for-the-badge&logo=codechef&logoColor=white)](https://www.codechef.com/users/harsh_bajpai)
 
 ---
 
@@ -270,7 +270,7 @@ the best spec you can get.
 
 ## 🏆 Highlights
 
-- 🧮 **Competitive programming** — [LeetCode **Guardian**, rating 2606 — global rank **#1027**, **top 0.12%**](https://leetcode.com/u/Harsh2615/) · [Codeforces **Expert**](https://codeforces.com/profile/Dilha_1526) · [CodeChef **6★**](https://www.codechef.com/users/harsh_bajpai) · AtCoder **Cyan**
+- 🧮 **Competitive programming** — [LeetCode **Guardian**, rating 2606 — global rank **#1027**, **top 0.12%**](https://leetcode.com/u/Harsh2615/) · [Codeforces **Expert**](https://codeforces.com/profile/Dilha_1526) · [CodeChef **6★ (Div 1)**, rating 2225 — global rank **#233**, India **#130**](https://www.codechef.com/users/harsh_bajpai) · AtCoder **Cyan** · **100%** on the CodeChef C++ skill test
 - 🎯 **AIR 3 — IOQM 2022** · AIR 69, UGEE 2025 · qualified **NSEP / NSEC / NSEA**
 - 🥇 **EZHEALTH presented to the Prime Minister of India** · **Gold Award**, INEX Innovation & Invention Expo 2022 (represented India)
 - 🏅 Top 20, TechExpo IIT Guwahati · Top 30 & 300, ATL Marathon · Top 75, ATL Space Challenge · Young Inventors Challenge (NCSTC) · Global Innovation **Impact** & **Communication** Awards
