@@ -9,8 +9,8 @@
 
 I take products from an empty repo to something real people use — architecture, multi-stage AI
 pipelines, the full-stack app, and the production deploy — usually as the **sole developer**.
-Four products of mine are live right now: a wedding marketplace, an app on Google Play, a
-consumer AI platform, and an internal tool that runs unattended every night.
+Five products of mine are live right now: a wedding marketplace, an app on Google Play, a
+consumer AI platform, an AI video generator, and a scout that runs unattended every night.
 
 I care about **clean seams** — keep the language model away from anything that must be exact —
 real tests over vanity coverage, and shipping in small verified increments.
