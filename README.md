@@ -83,7 +83,7 @@ goes out of range. Custom PCB in a 3D-printed case, about ₹1,800 to build. Gol
 | [M1005MacDriver](https://github.com/harsh-bajpai2615/M1005MacDriver) | Driver for the HP LaserJet M1005 MFP on Apple Silicon. One installer with foo2zjs and Ghostscript, no Homebrew. I needed it for my own printer |
 | [PdfTextEdit](https://github.com/harsh-bajpai2615/PdfTextEdit) | Changes words inside a PDF and keeps them as real text by rewriting the content stream instead of covering it with a white box. Checks the result by diffing the render. Python |
 | [DeckKit](https://github.com/harsh-bajpai2615/DeckKit) | Builds animated teaching decks as real .pptx files: click reveals, a clickable mind map, quiz slides. pptxgenjs can't write animations, so a second pass adds the timing XML. Node, Python |
-| [CommitConstellation](https://github.com/harsh-bajpai2615/CommitConstellation) | Draws a repo's commit history as a night sky. Files that change often are bigger stars, files that change together are joined. No dependencies |
+| [CommitConstellation](https://github.com/harsh-bajpai2615/CommitConstellation) | Draws a repo's commit history as a night sky. Files that change often are bigger stars, files that change together are joined. [Live demo](https://harsh-bajpai2615.github.io/CommitConstellation/). No dependencies |
 | [CompetitiveProgramming](https://github.com/harsh-bajpai2615/CompetitiveProgramming) | My C++ solutions from Codeforces, LeetCode and CodeChef |
 
 ## Also built
