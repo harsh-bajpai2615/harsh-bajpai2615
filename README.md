@@ -90,8 +90,8 @@ goes out of range. Custom PCB in a 3D-printed case, about ₹1,800 to build. Gol
 
 - **Shloka**, an offline Android app of devotional shlokas, made for my mother
 - **MPCA Match Referee**, a Hindi Android app for my father's cricket match referee exam, with two printed study booklets (100 and 126 pages) typeset from the official forms
-- **signal-export**, decrypts the Signal Desktop database and exports each chat to HTML and JSON with photos, video, audio and reactions
-- **Hindi TTS audiobooks**, turns a scanned devotional PDF into chapter MP3s locally. The text was in the Krutidev legacy font, so it needed a glyph-level converter to Unicode first
+- **[SignalExport](https://github.com/harsh-bajpai2615/SignalExport)**, decrypts the Signal Desktop database and exports each chat to HTML and JSON with photos, video, audio and reactions
+- **[HindiTts](https://github.com/harsh-bajpai2615/HindiTts)**, turns a scanned devotional PDF into chapter MP3s locally. The text was in the Krutidev legacy font, so it needed a glyph-level converter to Unicode first
 - **class-notes**, a Whisper pipeline that turns lecture recordings into class notes
 
 ## Tech
