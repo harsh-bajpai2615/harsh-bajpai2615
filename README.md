@@ -7,9 +7,6 @@ now
 Studying at IIM Mumbai (BS Digital Science and Business Management) and IIT Madras (BS Data
 Science). Based in Rewa, India
 
-[![LeetCode](https://img.shields.io/badge/LeetCode-Guardian%20%7C%202606-FFA116?style=flat&logo=leetcode&logoColor=black)](https://leetcode.com/u/Harsh2615/)
-[![Codeforces](https://img.shields.io/badge/Codeforces-Expert-1F8ACB?style=flat&logo=codeforces&logoColor=white)](https://codeforces.com/profile/Dilha_1526)
-[![CodeChef](https://img.shields.io/badge/CodeChef-6%20star%20%7C%202225-5B4638?style=flat&logo=codechef&logoColor=white)](https://www.codechef.com/users/harsh_bajpai)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://linkedin.com/in/harsh-bajpai2007)
 
 ## Working on now
@@ -84,7 +81,6 @@ goes out of range. Custom PCB in a 3D-printed case, about ₹1,800 to build. Gol
 | [PdfTextEdit](https://github.com/harsh-bajpai2615/PdfTextEdit) | Changes words inside a PDF and keeps them as real text by rewriting the content stream instead of covering it with a white box. Checks the result by diffing the render. Python |
 | [DeckKit](https://github.com/harsh-bajpai2615/DeckKit) | Builds animated teaching decks as real .pptx files: click reveals, a clickable mind map, quiz slides. pptxgenjs can't write animations, so a second pass adds the timing XML. Node, Python |
 | [CommitConstellation](https://github.com/harsh-bajpai2615/CommitConstellation) | Draws a repo's commit history as a night sky. Files that change often are bigger stars, files that change together are joined. [Live demo](https://harsh-bajpai2615.github.io/CommitConstellation/). No dependencies |
-| [CompetitiveProgramming](https://github.com/harsh-bajpai2615/CompetitiveProgramming) | My C++ solutions from Codeforces, LeetCode and CodeChef |
 
 ## Also built
 
